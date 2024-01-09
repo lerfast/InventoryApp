@@ -1,0 +1,23 @@
+<!-- app/views/excel/write_excel.html.erb -->
+<h1>Escribir en Excel</h1>
+
+<%= form_with(url: write_excel_path, method: :post) do |form| %>
+  <div>
+    <%= form.label :row, "Fila" %>
+    <%= form.number_field :row %>
+  </div>
+
+  <div>
+    <%= form.label :column, "Columna" %>
+    <%= form.number_field :column %>
+  </div>
+
+  <div>
+    <%= form.label :value, "Valor" %>
+    <%= form.text_field :value %>
+  </div>
+
+  <div>
+    <%= form.submit "Escribir en Excel" %>
+  </div>
+<% end %>
